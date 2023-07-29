@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:var(--primary-color);
+  background-image:var(--primary-bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+:root{
+	--primary-color: #F5F5F5;
+	--secondary-color: #212121;
+	--primary-bg: url('../assets/images/hero-light.jpg');
+}
+.dark-theme{
+	--primary-color: #606060;
+	--secondary-color: #fff;
+	--primary-bg: url('../assets/images/hero-dark.jpg');
+}
+
+/* Main Page Layout */
+
+#main-content {
+  margin: 225px 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  
+}
+
+
+
+
+/* Portfolio Header */
+nav{
+	width: 84%;
+	margin:auto;
+	padding:20px 0;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+nav ul li{
+	display:inline-block;
+	list-style:none;
+	margin: 10px 20px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: var(--secondary-color);	
+}
+
+nav ul li a:hover{
+	color: 	#FFA500;/*var(----secondary-color)*/
+	text-decoration: underline;
+}
+#portfolio-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+#portfolio-header-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex-basis: 50%;
+}
+
+.portfolio-header-image {
+  width: 100%;
+  height: auto;
+}
+
+#portfolio-header-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 50%;
+  color: var(--secondary-color);
+}
+
+
+#icon{
+	width:22px;
+	cursor: pointer;
+}
+
+
+
+
+/* About Section */
+
+#about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--secondary-color);
+}
+
+.about-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  color: var(--secondary-color);
+}
+
+
+
+
+/* Project Section */
+
+#my-work-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--secondary-color);
+}
+
+.projects-container {
+  display: flex;
+  gap: 34px 16px;
+  flex-wrap: wrap;
+}
+
+    /* Project Cards */
+
+    .project-card {
+      max-width: calc((100% - 32px) / 3);
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+    }
+
+    .project-card-text-container {
+      flex-direction: column;
+      display: flex;
+      gap: 16px
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+
+
+
+/* Project Pages */
+
+#project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--secondary-color);
+}
+
+.project-header-image {
+  width: 100%;
+  height: auto;
+}
+
+#project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: var(--secondary-color);
+}
+
+.project-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+    /* Project Gallery */
+
+    #project-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .project-gallery-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px 16px;
+    }
+
+    .gallery-image-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .gallery-image-container.half-width {
+      width: calc((100% - 16px) / 2);
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: auto;
+    }
+
+
+/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
+@media only screen and (max-width: 1600px) {
+  #main-content {
+    margin: 225px 275px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and below) */
+@media only screen and (max-width: 1200px) {
+  #main-content {
+    margin: 225px 175px;
+  }
+}
+
+/* Large devices (laptops/desktops, 1000px and below) */
+@media only screen and (max-width: 1000px) {
+  #main-content {
+    margin: 225px 75px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 800px and below) */
+@media only screen and (max-width: 800px) {
+  #main-content {
+    margin: 150px 50px;
+  }
+
+  #portfolio-header {
+    flex-direction: column;
+  }
+
+  .project-card {
+    max-width: calc((100% - 16px) / 2);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+  #main-content {
+    margin: 125px 20px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+}
+
+
+/*About me */
+
